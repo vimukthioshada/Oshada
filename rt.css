@@ -29,10 +29,9 @@
 :root {
     --bg-color: #e3edf7;
     --gradient-white-bg: #ffffff;
-    --gradient-color-bg: #0c3461;
-    --main-color: #0f8bc9;
+    --gradient-color-bg: #ae1010;
+    --main-color: #b1b1b1;
     --font-color: #000000;
-    --font-color-home: #f5f7f7;
     --hover-box-shadow: rgba(29, 19, 87, 0.19)0px 10px 20px,
         rgba(142, 114, 23, 0.23)0px 6px 6px;
     --gradient-white-bg2: #fffffd;
@@ -46,7 +45,6 @@
     --gradient-color-bg: #000;
     --main-color: #3e4451;
     --font-color: #b6bdca;
-    --font-color-home: #f5f7f7;
     --hover-box-shadow: rgba(236, 235, 238, 0.19)0px 10px 20px,
         rgba(248, 248, 245, 0.23)0px 6px 6px;
     --gradient-white-bg2: #ffffff;
@@ -194,16 +192,7 @@ section {
     padding: 90px 8%;
 }
 
-.home {
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 4em;
-    background: var(--main-color);
-}
+
 
 .hero-info {
     margin-top: 3rem;
@@ -1212,7 +1201,7 @@ footer {
         padding-right: 3%;
     }
 
-    .home,
+   
     .portfolio-box {
         flex-direction: column-reverse;
     }
@@ -1298,9 +1287,7 @@ footer {
         padding: 10px;
     }
 
-    .home {
-        grid-gap: 0;
-    }
+ 
 
     .fillter-buttons button {
         padding: 10px;
@@ -1362,3 +1349,28 @@ footer {
         padding: 13px;
     }
 }
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: 
+      0 0 0 rgb(255 0 0), 
+      0 0 0 rgb(0 255 0), 
+      0 0 0 rgb(0 0 255);
+    font-size:100px;
+    animation: l32 1s infinite cubic-bezier(0.5,-2000,0.5,2000);
+  }
+  .loader:before {
+    content:"O S H A D A";
+  }
+  
+  @keyframes l32{
+    25%,100% {
+    text-shadow: 
+       0.03px -0.01px 0.01px rgb(255 0 0), 
+       0.02px  0.02px 0     rgb(0 255 0), 
+      -0.02px  0.02px 0     rgb(0 0 255);
+    }
+  }
